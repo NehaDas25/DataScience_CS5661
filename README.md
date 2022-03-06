@@ -5,7 +5,11 @@ To start with the project, open a local directory and clone:
 1. Through bash - Download git-bash or direct download project zip folder.
 2. Clone it through bash:
     $ git clone https://github.com/NehaDas25/DataScience_CS5661.git  
-3. Run the jupyter notebook.
+3. After cloning, open annaconda command prompt, then enter the directory of the repository.
+    $ cd DataScience_5661 
+4. From this directory, type jupyter notebook it should open a localhost with the repository structure as a tree.
+5. Open the Credit_Card_Fraud_Detection.ipynb and start running.
+
 
 <h1>Since the dataset is very huge, so the .csv file is zipped up.</h1>
 
