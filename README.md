@@ -9,7 +9,7 @@ To start with the project, open a local directory and clone:
 
 <h1>Since the dataset is very huge, so the .csv file is zipped up.</h1>
 
-Visualize the data for credit card as collected:
+<b> Visualize the data for credit card as collected: </b>
 1. Unzip the credit_card.zip file and read the dataset (creditcard.csv).
 2. Print the dataset. 
 
