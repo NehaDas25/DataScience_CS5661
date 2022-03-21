@@ -25,5 +25,5 @@ To start with the project, open a local directory and clone:
 <b> Lets see the difference between fraud and genuine transaction.</b>
 1. There are 492 fraud transactions and 284315 genuine transactions.
 2. Plot looks somehow like this:
-<img src="https://user-images.githubusercontent.com/100334984/159193950-9b689834-853f-4ee7-9441-7ee736083f29.png"</img>
-
+<b></b>
+![This is an image](https://user-images.githubusercontent.com/100334984/159194089-0bb966b5-4c0c-4fcc-bb75-138c165429b6.png)
