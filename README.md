@@ -25,5 +25,15 @@ To start with the project, open a local directory and clone:
 <b> Lets see the difference between fraud and genuine transaction.</b>
 1. There are 492 fraud transactions and 284315 genuine transactions.
 2. Plot looks somehow like this:
+
 <b></b>
 ![This is an image](https://user-images.githubusercontent.com/100334984/159194089-0bb966b5-4c0c-4fcc-bb75-138c165429b6.png)
+
+<b> Check whether the features are scaled or not:</b>
+1. Upon checking, all V - features are scaled, except Amount and Time.
+2. In our project, we have used MinMaxScaler to make our work more simpler and easier.
+3. There are lots of other scalers, but minmax is our best option, since we are intended to ignore intermediate values,
+    rather focus on minimum and maximum values.
+4. Before scaling vs After Scaling
+
+![image](https://user-images.githubusercontent.com/100334984/159194480-235be599-8efd-4fbf-8130-d5b26af35b64.png)
