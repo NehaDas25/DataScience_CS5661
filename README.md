@@ -21,3 +21,8 @@ To start with the project, open a local directory and clone:
 1. The dataset looks horrible and imbalanced, so we may need to balance it.
 2. Need to understand the features involved in the dataset.
 3. Then proceed to balancing the dataset.
+
+<b> Lets see the difference between fraud and genuine transaction.</b>
+1. There are 492 fraud transactions and 284315 genuine transactions.
+2. Plot looks somehow like this:![image](https://user-images.githubusercontent.com/100334984/159193950-9b689834-853f-4ee7-9441-7ee736083f29.png)
+
