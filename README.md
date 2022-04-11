@@ -88,4 +88,4 @@ b. Find the accuracy with respect to y_test.
 3. We calculated AUC for all the 4-algorithms using metric.AUC from the FPR and TPR as caluclated in step-2.
 4. Then plot the ROC curve with their respective AUC in matlib plot.
 
-![image]()
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROC.png)
