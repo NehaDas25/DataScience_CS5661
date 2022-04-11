@@ -83,8 +83,9 @@ To start with the project, open a local directory and clone:
 2. Find the accuracy with respect to y_test.
 
 <h1> ROC and AUC. </h1>
+
 <b> Finding TPR and FPR </b> 
-1. We calculated y_predict_probab for all the 4-algorithms.
+1. We calculated y_predict_probab for all the 4-algorithms. 
 2. We found TPR(True Positive Rate), FPR(False Positive Rate) and Threshold for all the 4-algorithms using ROC from sklearn.
 
 <b> Find the AUC and plotting ROC curve. </b>
