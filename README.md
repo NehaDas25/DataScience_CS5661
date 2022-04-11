@@ -22,6 +22,7 @@ To start with the project, open a local directory and clone:
 2. Need to understand the features involved in the dataset.
 3. Then proceed to balancing the dataset.
 
+<h1> Sample the dataset and scale the features. </h1>
 <b> Lets see the difference between fraud and genuine transaction.</b>
 1. There are 492 fraud transactions and 284315 genuine transactions.
 2. Before sampling, the contor plot looks somehow like this:
@@ -51,3 +52,40 @@ To start with the project, open a local directory and clone:
 
 ![image](https://user-images.githubusercontent.com/100334984/159194994-08532334-3118-4bf8-bbab-ecbb89e289c4.png)
 
+<h1> Performing pre-checks on dataset for implementing algorithms.</h1>
+
+<b> Extract the feature column and target column. </b>
+1. From the normalized_data_set, class column is removed and is labelled as X.
+2. We considered class column as the target from normalized_data_set and labelled as y.
+
+<b> Split the data for X_train,X_test,y_train,y_test with test size and random state. </b>
+    Test size and random state are taken as user inputs.
+    
+<h1> Start with implementing algorithms. </h1>
+
+<b> 1. KNN classifier </b>
+a. k is taken as user-input for number of neighbors you want to classify.
+b. Fit and predict the model.
+c. Find the accuracy with respect to y_test.
+
+<b> 2. Decision Tree Classifier </b>
+a. Fit and predict the model.
+b. Find the accuracy with respect to y_test.
+
+<b> 3. Random Forest classifier </b>
+a. Here we will use the random state that's already used while splitting the dataset.
+b. User input to enter the number of estimators for Random Forest Classification.
+c. Fit and predict the model.
+d. Find the accuracy with respect to y_test.
+
+<b> 4. Logistic Regression </b>
+a. Fit and predict the model.
+b. Find the accuracy with respect to y_test.
+
+<h1> ROC and AUC. </h1>
+1. We calculated y_predict_probab for all the 4-algorithms.
+2. We found TPR(True Positive Rate), FPR(False Positive Rate) and Threshold for all the 4-algorithms using ROC from sklearn.
+3. We calculated AUC for all the 4-algorithms using metric.AUC from the FPR and TPR as caluclated in step-2.
+4. Then plot the ROC curve with their respective AUC in matlib plot.
+
+![image]()
