@@ -117,7 +117,7 @@ To start with the project, open a local directory and clone:
 <b> Plotting the Confusion Matrix for all the 7-Algorithm in two subplot </b>
 
 1. 1st subplot containing KNN, DecisionTree, RandomForest, LogisticRegression.
-2. 2. 2nd subplot containing ANN_Algorithm, naiveBayes_algorithm, svm_algorithm.
+2. 2nd subplot containing ANN_Algorithm, naiveBayes_algorithm, svm_algorithm.
 
 <b></b>
     
