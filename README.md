@@ -97,6 +97,7 @@ To start with the project, open a local directory and clone:
 
 <h1> ROC and AUC. </h1>
 <b> Finding TPR and FPR </b>
+
 1. We calculated y_predict_probab for all the 4-algorithms. 
 2. We found TPR(True Positive Rate), FPR(False Positive Rate) and Threshold for all the 4-algorithms using ROC from sklearn.
 
@@ -114,6 +115,7 @@ To start with the project, open a local directory and clone:
 
 <h1> Confusion Matrix. </h1>
 <b> Plotting the Confusion Matrix for all the 7-Algorithm in two subplot </b>
+
 1. 1st subplot containing KNN, DecisionTree, RandomForest, LogisticRegression.
 2. 2. 2nd subplot containing ANN_Algorithm, naiveBayes_algorithm, svm_algorithm.
 
