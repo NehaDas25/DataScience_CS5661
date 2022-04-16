@@ -24,6 +24,7 @@ To start with the project, open a local directory and clone:
 
 <h1> Sample the dataset and scale the features. </h1>
 <b> Lets see the difference between fraud and genuine transaction.</b>
+
 1. There are 492 fraud transactions and 284315 genuine transactions.
 2. Before sampling, the contor plot looks somehow like this:
 
