@@ -24,6 +24,7 @@ To start with the project, open a local directory and clone:
 
 <h1> Sample the dataset and scale the features. </h1>
 <b> Lets see the difference between fraud and genuine transaction.</b>
+
 1. There are 492 fraud transactions and 284315 genuine transactions.
 2. Before sampling, the contor plot looks somehow like this:
 
@@ -31,13 +32,25 @@ To start with the project, open a local directory and clone:
 ![This is an image](https://user-images.githubusercontent.com/100334984/159194089-0bb966b5-4c0c-4fcc-bb75-138c165429b6.png)
 
 <b> Check whether the features are scaled or not:</b>
-1. Upon checking, all V - features are scaled, except Amount and Time.
-2. In our project, we have used MinMaxScaler to make our work more simpler and easier.
-3. There are lots of other scalers, but minmax is our best option, since we are intended to ignore intermediate values,
+1. Lets use heatmap to find the correlation for the features.
+2. Correlation is a table that shows relation between the feature. With heatmap and colors we can visualise and spot the difference efficiently.
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/HeatMap%20for%20correlations%20of%20features%20(V1-V28).png)
+
+
+3. From the above image, we could see highest correlation between Time & V3[<-0.4], Amount & V2[<-0.4], Amount & V4[0.19].
+4. Upon checking, all V - features are scaled, except Amount and Time.
+5. In our project, we have used MinMaxScaler to make our work more simpler and easier.
+6. There are lots of other scalers, but minmax is our best option, since we are intended to ignore intermediate values,
     rather focus on minimum and maximum values.
-4. Before scaling vs After Scaling
+7. Before scaling vs After Scaling
 
 ![image](https://user-images.githubusercontent.com/100334984/159194480-235be599-8efd-4fbf-8130-d5b26af35b64.png)
+
+8. After scaling the features Amount and Time,let us take a look at the Correlation table.
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/HeatMap%20for%20correlations%20after%20scaling%5BTime%20and%20Amount%5D.png)
+
 
 <b> Lets resample dataset. </b>
 1. Now that all features are scaled and everything looks fine, but dataset is still horrible.
@@ -59,12 +72,12 @@ To start with the project, open a local directory and clone:
 2. We considered class column as the target from normalized_data_set and labelled as y.
 
 <b> Split the data for X_train,X_test,y_train,y_test with test size and random state. </b>
-1. Test size and random state are taken as user inputs.
+1. Test size is taken as 0.3 and random state = 42
     
 <h1> Start with implementing algorithms. </h1>
 
 <b> KNN classifier </b>
-1. k is taken as user-input for number of neighbors you want to classify.
+1. k is number of neighbors you want to classify, so here k = 3.
 2. Fit and predict the model.
 3. Find the accuracy with respect to y_test.
 
@@ -74,17 +87,29 @@ To start with the project, open a local directory and clone:
 
 <b> Random Forest classifier </b>
 1. Here we will use the random state that's already used while splitting the dataset.
-2. User input to enter the number of estimators for Random Forest Classification.
-3. Fit and predict the model.
-4. Find the accuracy with respect to y_test.
+2. Fit and predict the model.
+3. Find the accuracy with respect to y_test.
 
 <b> Logistic Regression </b>
 1. Fit and predict the model.
 2. Find the accuracy with respect to y_test.
 
-<h1> ROC and AUC. </h1>
+<b> Artificial Neural Network </b>
+1. We took 1 Hidden Layer with 200 neurons
+2. Fit and predict the model.
+3. Find the accuracy with respect to y_test.
 
-<b> Finding TPR and FPR </b> 
+<b> Naive Bayes </b>
+1. Fit and predict the model.
+2. Find the accuracy with respect to y_test.
+
+<b> Support Vector Machine </b>
+1. Fit and predict the model.
+2. Find the accuracy with respect to y_test.
+
+<h1> ROC and AUC. </h1>
+<b> Finding TPR and FPR </b>
+
 1. We calculated y_predict_probab for all the 4-algorithms. 
 2. We found TPR(True Positive Rate), FPR(False Positive Rate) and Threshold for all the 4-algorithms using ROC from sklearn.
 
@@ -95,3 +120,23 @@ To start with the project, open a local directory and clone:
 <b></b>
 
 ![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROC.png)
+
+<b></b>
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROCzoom.png)
+
+<h1> Confusion Matrix. </h1>
+<b> Plotting the Confusion Matrix for all the 7-Algorithm in two subplot </b>
+
+1. 1st subplot containing KNN, DecisionTree, RandomForest, LogisticRegression.
+2. 2nd subplot containing ANN_Algorithm, naiveBayes_algorithm, svm_algorithm.
+
+<b></b>
+    
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Confusion%20Matrix%20for%20first%204-algorithms.png)
+    
+<b></b>    
+ 
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Confusion%20Matrix%20for%20last%203-algorithms.png)
+    
+   
