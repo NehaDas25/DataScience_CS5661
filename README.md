@@ -141,21 +141,14 @@ To start with the project, open a local directory and clone:
     
  <h> Observations from the Project </h>
  Now we have all the scores for the 7-algorithms, lets see which one gives the best among the 7-algorithms.
- Algorithms	Accuracy	Precision	Recall	ROC-AUC	F1-Score
-KNN	93.58%	95.80%	91.33%	96.10%	93.51%
-Decision Tree	90.54%	89.61%	92.00%	90.50%	91.80%
-Random Forest	93.24%	93.91%	92.66%	97.90%	93.28%
-Logistic Regression	94.59%	96.52%	92.66%	97.80%	94.55%
-Artificial Neural Network	95.27%	96.57%	94.00%	97.87%	95.27%
-Naïve Bayes	91.21%	97.69%	84.66%	95.50%	90.71%
-Support Vector Machine	94.25%	97.84%	90.66%	97.60%	90.66%
-					
-![image](https://user-images.githubusercontent.com/100334984/164952744-c9f6b1a2-7d4a-41c2-a301-86f24bef5f26.png)
+ 
+![image](https://user-images.githubusercontent.com/100334984/164953049-d3c27304-a221-4bdb-9c6e-fed27465f266.png)
+
 
 ![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Results_from_project.png)
 
-# From the histogram above we observed that the best result was observed with ANN(Artificial Neural Network), with an accuracy of
-# 95.27%, precision of 96.57%, recall of 94%, ROC of 97.87% and F1-score of 95.27%.
+From the histogram above we observed that the best result was observed with ANN(Artificial Neural Network), with an accuracy of 
+95.27%, precision of 96.57%, recall of 94%, ROC of 97.87% and F1-score of 95.27%.
 
-# So with this we conclude that for credit card fraud detection algorithm, the best suitable algorithm is ANN(Artificial Neural Network).
+So with this we conclude that for credit card fraud detection algorithm, the best suitable algorithm is ANN(Artificial Neural Network).
 
