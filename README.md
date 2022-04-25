@@ -78,34 +78,34 @@ To start with the project, open a local directory and clone:
 
 <b> KNN classifier </b>
 1. k is number of neighbors you want to classify, so here k = 3.
-2. Fit and predict the model.
-3. Find the accuracy with respect to y_test.
+2. Fit and predict the model, this gives y_predict.
+3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
 
 <b> Decision Tree Classifier </b>
-1. Fit and predict the model.
-2. Find the accuracy with respect to y_test.
+1. Fit and predict the model, this gives y_predict.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
 
 <b> Random Forest classifier </b>
 1. Here we will use the random state that's already used while splitting the dataset.
-2. Fit and predict the model.
-3. Find the accuracy with respect to y_test.
+2. Fit and predict the model, this gives y_predict.
+3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
 
 <b> Logistic Regression </b>
-1. Fit and predict the model.
-2. Find the accuracy with respect to y_test.
+1. Fit and predict the model, this gives y_predict.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
 
 <b> Artificial Neural Network </b>
 1. We took 1 Hidden Layer with 200 neurons
-2. Fit and predict the model.
-3. Find the accuracy with respect to y_test.
+2. Fit and predict the model, this gives y_predict.
+3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
 
 <b> Naive Bayes </b>
-1. Fit and predict the model.
-2. Find the accuracy with respect to y_test.
+1. Fit and predict the model, this gives y_predict.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
 
 <b> Support Vector Machine </b>
-1. Fit and predict the model.
-2. Find the accuracy with respect to y_test.
+1. Fit and predict the model, this gives y_predict.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
 
 <h1> ROC and AUC. </h1>
 <b> Finding TPR and FPR </b>
@@ -139,4 +139,16 @@ To start with the project, open a local directory and clone:
  
 ![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Confusion%20Matrix%20for%20last%203-algorithms.png)
     
-   
+ <h> Observations from the Project </h>
+ Now we have all the scores for the 7-algorithms, lets see which one gives the best among the 7-algorithms.
+ 
+![image](https://user-images.githubusercontent.com/100334984/164953049-d3c27304-a221-4bdb-9c6e-fed27465f266.png)
+
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Results_from_project.png)
+
+From the histogram above we observed that the best result was observed with ANN(Artificial Neural Network), with an accuracy of 
+95.27%, precision of 96.57%, recall of 94%, ROC of 97.87% and F1-score of 95.27%.
+
+So with this we conclude that for credit card fraud detection algorithm, the best suitable algorithm is ANN(Artificial Neural Network).
+
