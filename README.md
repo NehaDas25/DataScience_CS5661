@@ -143,10 +143,11 @@ To start with the project, open a local directory and clone:
  Now we have all the scores for the 7-algorithms, lets see which one gives the best among the 7-algorithms.
  
 
-![image](https://user-images.githubusercontent.com/100334984/165024134-bd8672cb-d53c-44ab-a5da-ff954e78d469.png)
+![image](https://user-images.githubusercontent.com/100334984/165025065-8650bf17-dba1-4582-927f-82ef075bee38.png)
 
 
-![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Graph_Results_Project.png)
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Graph_Results_from_Project.png)
 
 From the histogram above we observed that the best result was observed with ANN(Artificial Neural Network), with an accuracy of 
 95.27%, precision of 96.57%, recall of 94%, ROC of 97.87% and F1-score of 95.27%.
