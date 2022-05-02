@@ -191,7 +191,7 @@ To start with the project, open a local directory and clone:
 ![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Confusion%20Matrix%20for%20last%203-algorithms%20(NearMiss).png)
  
  
- <h> Observations from the Project </h>
+ <h> Observations from the Project using the Random UnderSampling Technique </h>
  Now we have all the scores for the 7-algorithms, lets see which one gives the best among the 7-algorithms.
  
 
@@ -199,10 +199,29 @@ To start with the project, open a local directory and clone:
 
 
 
-![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Graph_Results_from_Project.png)
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/randomundersampling.png)
 
-From the histogram above we observed that the best result was observed with ANN(Artificial Neural Network), with an accuracy of 
-95.27%, precision of 96.57%, recall of 94%, ROC of 97.87% and F1-score of 95.27%.
+<b></b>
 
-So with this we conclude that for credit card fraud detection algorithm, the best suitable algorithm is ANN(Artificial Neural Network).
+<h> Observations from the Project using the NearMiss UnderSampling Technique </h>
+ Now we have all the scores for the 7-algorithms, lets see which one gives the best among the 7-algorithms.
+ 
+
+
+![image](https://user-images.githubusercontent.com/100334984/166191830-bfdaee7a-5102-49b3-aa63-1e1b5c20a9eb.png)
+
+
+
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/nearmiss.png)
+
+
+From the above mentioned histograms, we observed that the best result was observed with ANN(Artificial Neural Network), with an accuracy of 
+95.27%, precision of 96.57%, recall of 94%, ROC of 97.87% and F1-score of 95.27% Using Random Undersampling.
+
+If we use approach 2 (NearMiss) to balance our data the best result was observed with Random Forest with an accuracy of 99.32%, precision of 99.31%, recall of
+99.31%, ROC-AUC of 99.85, and F1-Score of 99.31.
+
+So, with this we conclude that for credit card fraud detection algorithm, the best suitable algorithm is ANN (Artificial Neural Network) if we use Random
+Undersampling to balance our data. If we use NearMiss to balance our data, we can conclude that the best suitable algorithm is Random Forest.
 
