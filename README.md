@@ -60,10 +60,27 @@ To start with the project, open a local directory and clone:
        a) Fraud cases is 492 and genuine cases is 284315.
        b) So to match up we duplicated certain values among 492 cases.
        c) And in our case, its wrong to do oversampling.
- 5. So we did undersampling, by randomly selecting 492 observations from genuine transactions. That sounded very fast and proimising on visualising the dataset.
+ 5. So we did Random undersampling, by randomly selecting 492 observations from genuine transactions. That sounded very fast and proimising on visualising the dataset.
  6. After undersampling the contor plot looks something like this:
 
 ![image](https://user-images.githubusercontent.com/100334984/159194994-08532334-3118-4bf8-bbab-ecbb89e289c4.png)
+
+ 
+ 7. Next we performed the 2nd Undersampling Technique called NearMiss Undersampling. In NearMiss UnderSampling technique, there are three version but for this    project version 2 is used. In simplest term, the method will balance the dataset by looking at the class distribution and removing samples from Majority Class randomly.
+ 8. Using the vesion 2 of NearMiss,the dataset will be balanced by calculating the average minimum distance between the Majority class and 3 (N furthest samples) of the minority class and selects the smallest.
+ 9. To perform NearMiss we simply import NearMiss from the imblearn library, we then initialize NearMiss using version 2 and perform fit_resample to both the Features and the Target.
+ 10. Below is the Scatter plot for " Before NearMiss Undersampling ".
+
+
+![image](https://user-images.githubusercontent.com/100334984/166180557-e83995a9-77ef-4c84-8c46-b09a158d499d.png)
+
+
+ 11. Below is the scatter plot for " After NearMiss Undersampling ".
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/100334984/166180965-fe9e0312-8cf3-408e-acae-a2e3ec8c0d6b.png)
+
+
 
 <h1> Performing pre-checks on dataset for implementing algorithms.</h1>
 
@@ -71,61 +88,79 @@ To start with the project, open a local directory and clone:
 1. From the normalized_data_set, class column is removed and is labelled as X.
 2. We considered class column as the target from normalized_data_set and labelled as y.
 
-<b> Split the data for X_train,X_test,y_train,y_test with test size and random state. </b>
+<b> Split the data for X_train,X_test,y_train,y_test with test size and random state Using Random Undersampling data </b>
 1. Test size is taken as 0.3 and random state = 42
+
+<b> Split the data for X_train,X_test,y_train,y_test with test size and random state Using NearMiss Undersampling data </b>
+1. Test size is taken as 0.3 and random state = 42 
     
 <h1> Start with implementing algorithms. </h1>
 
 <b> KNN classifier </b>
 1. k is number of neighbors you want to classify, so here k = 3.
 2. Fit and predict the model, this gives y_predict.
-3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
+3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test for both the Random and NearMiss Undersampling Technique.
 
 <b> Decision Tree Classifier </b>
 1. Fit and predict the model, this gives y_predict.
-2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test for both the Random and NearMiss Undersampling Technique.
 
 <b> Random Forest classifier </b>
 1. Here we will use the random state that's already used while splitting the dataset.
 2. Fit and predict the model, this gives y_predict.
-3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
+3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test for both the Random and NearMiss Undersampling Technique.
 
 <b> Logistic Regression </b>
 1. Fit and predict the model, this gives y_predict.
-2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test for both the Random and NearMiss Undersampling Technique.
 
 <b> Artificial Neural Network </b>
 1. We took 1 Hidden Layer with 200 neurons
 2. Fit and predict the model, this gives y_predict.
-3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
+3. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test for both the Random and NearMiss Undersampling Technique.
 
 <b> Naive Bayes </b>
 1. Fit and predict the model, this gives y_predict.
-2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test for both the Random and NearMiss Undersampling Technique.
 
 <b> Support Vector Machine </b>
 1. Fit and predict the model, this gives y_predict.
-2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test.
+2. Find the accuracy, precision, recall and f1-score for y_predict with respect to y_test for both the Random and NearMiss Undersampling Technique.
 
-<h1> ROC and AUC. </h1>
+<h1> Implementing ROC and AUC with both the sampling Dataset. </h1>
 <b> Finding TPR and FPR </b>
 
-1. We calculated y_predict_probab for all the 4-algorithms. 
-2. We found TPR(True Positive Rate), FPR(False Positive Rate) and Threshold for all the 4-algorithms using ROC from sklearn.
+1. We calculated y_predict_probab for all the 7-algorithms. 
+2. We found TPR(True Positive Rate), FPR(False Positive Rate) and Threshold for all the 7-algorithms using ROC from sklearn.
 
 <b> Find the AUC and plotting ROC curve. </b>
-1. We calculated AUC for all the 4-algorithms using metric.AUC from the FPR and TPR as caluclated in step-2.
+1. We calculated AUC for all the 7-algorithms using metric. AUC from the FPR and TPR as caluclated in step-2.
 2. Then plot the ROC curve with their respective AUC in matlib plot.
 
-<b></b>
-
-![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROC.png)
+<h1> Images of ROC curve using Random Undersampling dataset. </h1>
 
 <b></b>
 
-![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROCzoom.png)
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROCrandom.png)
 
-<h1> Confusion Matrix. </h1>
+<b></b>
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROCrandomzoomed.png)
+
+<b></b>
+
+<h1> Images of ROC curve using NearMiss Undersampling dataset. </h1>
+
+<b></b>
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROCnearmiss.png)
+
+<b></b>
+
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/ROCnearmisszoomed.png)
+
+
+<h1> Confusion Matrix with Random Undersampling Technique dataset. </h1>
 <b> Plotting the Confusion Matrix for all the 7-Algorithm in two subplot </b>
 
 1. 1st subplot containing KNN, DecisionTree, RandomForest, LogisticRegression.
@@ -138,7 +173,24 @@ To start with the project, open a local directory and clone:
 <b></b>    
  
 ![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Confusion%20Matrix%20for%20last%203-algorithms.png)
+
+<b></b>
+
+<h1> Confusion Matrix with NearMiss Undersampling Technique dataset. </h1>
+<b> Plotting the Confusion Matrix for all the 7-Algorithm in two subplot </b>
+
+1. 1st subplot containing KNN, DecisionTree, RandomForest, LogisticRegression.
+2. 2nd subplot containing ANN_Algorithm, naiveBayes_algorithm, svm_algorithm.
+
+<b></b>
     
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Confusion%20Matrix%20for%20first%204-algorithms%20(NearMiss).png)
+    
+<b></b>    
+ 
+![image](https://github.com/NehaDas25/DataScience_CS5661/blob/main/Confusion%20Matrix%20for%20last%203-algorithms%20(NearMiss).png)
+ 
+ 
  <h> Observations from the Project </h>
  Now we have all the scores for the 7-algorithms, lets see which one gives the best among the 7-algorithms.
  
